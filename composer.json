@@ -1,0 +1,122 @@
+{
+    "name": "dbarbar/springboard-composer",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "David Barbarisi",
+            "email": "davidbarbarisi@gmail.com"
+        }
+    ],
+    "minimum-stability": "alpha",
+    "repositories": [
+        {
+          "type": "composer",
+          "url": "http://packagist.drupal-composer.org"
+        },
+        {
+            "type": "vcs",
+            "url": "git@github.com:promet/drop_ship"
+        },
+        {
+            "type": "vcs",
+            "url": "git@github.com:promet/kw_manifests"
+        },
+        {
+            "type": "vcs",
+            "url": "git://github.com/JacksonRiver/litle-sdk-for-php.git",
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "ckeditor/ckeditor",
+                "version": "3.6.6.1",
+                "dist": {
+                    "url": "http://download.cksource.com/CKEditor/CKEditor/CKEditor%203.6.6.1/ckeditor_3.6.6.1.zip",
+                    "type": "zip"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "davatron5000/FitVids.js",
+                "version": "1.1.0",
+                "dist": {
+                    "url": "https://github.com/davatron5000/FitVids.js/archive/v1.1.0.zip",
+                    "type": "zip"
+                }
+            }
+        }
+    ],
+    "require": {
+        "ckeditor/ckeditor": "3.6.6.1",
+        "composer/composer": "~1.0@alpha",
+        "davatron5000/FitVids.js": "1.1.0",
+        "developerforce/force.com-toolkit-for-php": "dev-master#329d109c0abad7d1cfa035e816dd907a98925289",
+        "drupal/drupal": "7.*",
+        "drupal/tangler": "~0.1.9",
+        "drupal/admin_menu": "7.*",
+        "drupal/context": "7.*",
+        "drupal/ctools": "7.*",
+        "drupal/drop_ship": "1.*",
+        "drupal/drupal-library-installer-plugin": "~0.1",
+        "drupal/date": "7.*",
+        "drupal/diff": "7.*",
+        "drupal/entity": "7.*",
+        "drupal/features": "7.2.*",
+        "drupal/feeds": "7.*",
+        "drupal/job_scheduler": "7.*",
+        "drupal/kw_manifests": "1.*",
+        "drupal/module_filter": "7.*",
+        "drupal/omega": "7.4.*",
+        "drupal/panels": "7.*",
+        "drupal/registry_rebuild": "7.*",
+        "drupal/rules": "7.*",
+        "drupal/strongarm": "7.*",
+        "drupal/views": "7.*",
+        "drupal/wysiwyg": "7.*",
+        "drush/drush": "7.0.*@dev",
+        "litle/payments-sdk": "8.27.1-jr",
+        "winmillwill/settings_compile": "~2.1.1"
+    },
+    "require-dev": {
+        "drupal/backup_migrate": "7.3.*",
+        "drupal/devel": "7.*",
+        "drupal/diff": "~7.3.2",
+        "drupal/stage_file_proxy": "7.1.6",
+        "drupal/xhprof": "~7.1.0-beta3",
+    },
+    "extra": {
+        "drupal-libraries": {
+            "library-directory": "www/sites/all/libraries",
+            "libraries": [
+                {
+                    "name": "ckeditor",
+                    "package": "ckeditor/ckeditor"
+                },
+                {
+                    "name": "salesforce",
+                    "package": "developerforce/force.com-toolkit-for-php"
+                },
+                {
+                    "name": "litle",
+                    "package": "litle/payments-sdk"
+                },
+                {
+                    "name": "fitvids",
+                    "package": "davatron5000/FitVids.js"
+                }
+            ]
+        }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "Drupal\\Tangler\\ScriptHandler::postUpdate",
+            "bin/wrapper"
+        ],
+        "post-update-cmd": [
+            "Drupal\\Tangler\\ScriptHandler::postUpdate"
+        ]
+    }
+}
