@@ -8,23 +8,22 @@
             "email": "davidbarbarisi@gmail.com"
         }
     ],
-    "minimum-stability": "alpha",
+    "minimum-stability": "beta",
     "repositories": [
         {
-          "type": "composer",
-          "url": "http://packagist.drupal-composer.org"
+            "type": "composer",
+            "url": "http://packagist.drupal-composer.org"
         },
         {
-            "type": "vcs",
-            "url": "git@github.com:promet/drop_ship"
-        },
-        {
-            "type": "vcs",
-            "url": "git@github.com:promet/kw_manifests"
-        },
-        {
-            "type": "vcs",
-            "url": "git://github.com/JacksonRiver/litle-sdk-for-php.git",
+            "type": "package",
+            "package": {
+                "name": "jacksonriver/litle-sdk-for-php",
+                "version": "dev-8.27.1-jr",
+                "dist": {
+                    "url": "https://github.com/JacksonRiver/litle-sdk-for-php/archive/8.27.1-jr.zip",
+                    "type": "zip"
+                }
+            }
         },
         {
             "type": "package",
@@ -54,30 +53,61 @@
         "composer/composer": "~1.0@alpha",
         "davatron5000/FitVids.js": "1.1.0",
         "developerforce/force.com-toolkit-for-php": "dev-master#329d109c0abad7d1cfa035e816dd907a98925289",
-        "drupal/drupal": "7.*",
+        "drupal/drupal": "7.35.0",
         "drupal/tangler": "~0.1.9",
-        "drupal/admin_menu": "7.*",
-        "drupal/context": "7.*",
-        "drupal/ctools": "7.*",
-        "drupal/drop_ship": "1.*",
+        "drupal/addressfield": "7.1.0-beta4",
+        "drupal/blockreference": "7.1.16",
+        "drupal/cdn": "7.2.6",
+        "drupal/context": "7.3.2",
+        "drupal/commerce": "7.1.11",
+        "drupal/commerce_authnet": "7.1.1",
+        "drupal/commerce_cardonfile": "7.2.0-beta1",
+        "drupal/commerce_paypal": "7.2.2",
+        "drupal/conditional_fields": "7.3.0-alpha1",
+        "drupal/ctools": "7.1.7",
         "drupal/drupal-library-installer-plugin": "~0.1",
-        "drupal/date": "7.*",
-        "drupal/diff": "7.*",
-        "drupal/entity": "7.*",
-        "drupal/features": "7.2.*",
-        "drupal/feeds": "7.*",
-        "drupal/job_scheduler": "7.*",
-        "drupal/kw_manifests": "1.*",
-        "drupal/module_filter": "7.*",
-        "drupal/omega": "7.4.*",
-        "drupal/panels": "7.*",
-        "drupal/registry_rebuild": "7.*",
-        "drupal/rules": "7.*",
-        "drupal/strongarm": "7.*",
-        "drupal/views": "7.*",
-        "drupal/wysiwyg": "7.*",
+        "drupal/date": "7.2.8",
+        "drupal/diff": "7.3.2",
+        "drupal/encrypt": "7.1.1",
+        "drupal/entity": "7.1.6",
+        "drupal/entityreference": "7.1.1",
+        "drupal/fboauth": "7.1.6",
+        "drupal/features": "7.2.0",
+        "drupal/field_group": "7.1.3",
+        "drupal/google_analytics": "7.1.3",
+        "drupal/honeypot": "7.1.17",
+        "drupal/imce": "7.1.6",
+        "drupal/imce_wysiwyg": "7.1.0",
+        "drupal/libraries": "7.2.1",
+        "drupal/link": "7.1.2",
+        "drupal/memcache": "7.1.0",
+        "drupal/metatag": "7.1.0-beta9",
+        "drupal/new_relic_rpm": "7.1.0-alpha1",
+        "drupal/node_clone": "7.1.0-rc1",
+        "drupal/panels": "7.3.4",
+        "drupal/panels_extra_styles": "7.1.1",
+        "drupal/password_policy": "7.1.9",
+        "drupal/pathauto": "7.1.2",
+        "drupal/redirect": "7.1.0-rc1",
+        "drupal/region_tokens": "7.1.0-rc3",
+        "drupal/rules": "7.2.3",
+        "drupal/securepages": "7.1.0-beta1",
+        "drupal/services": "7.3.7",
+        "drupal/strongarm": "7.2.0",
+        "drupal/shorten": "7.1.2",
+        "drupal/token": "7.1.5",
+        "drupal/video_embed_field": "7.2.0-beta7",
+        "drupal/views": "7.3.10",
+        "drupal/views_bulk_operations": "7.3.1",
+        "drupal/views_conditional": "7.1.1",
+        "drupal/views_data_export": "7.3.0-beta8",
+        "drupal/views_watchdog": "7.3.3",
+        "drupal/webform": "7.3.23",
+        "drupal/webform_ab": "7.2.1",
+        "drupal/webform_tokens": "7.1.5-rc1",
+        "drupal/wysiwyg": "7.2.2",
         "drush/drush": "7.0.*@dev",
-        "litle/payments-sdk": "8.27.1-jr",
+        "jacksonriver/litle-sdk-for-php": "dev-8.27.1-jr",
         "winmillwill/settings_compile": "~2.1.1"
     },
     "require-dev": {
@@ -85,7 +115,7 @@
         "drupal/devel": "7.*",
         "drupal/diff": "~7.3.2",
         "drupal/stage_file_proxy": "7.1.6",
-        "drupal/xhprof": "~7.1.0-beta3",
+        "drupal/xhprof": "~7.1.0-beta3"
     },
     "extra": {
         "drupal-libraries": {
@@ -101,7 +131,7 @@
                 },
                 {
                     "name": "litle",
-                    "package": "litle/payments-sdk"
+                    "package": "jacksonriver/litle-sdk-for-php"
                 },
                 {
                     "name": "fitvids",
