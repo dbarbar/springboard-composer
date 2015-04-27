@@ -1,0 +1,18 @@
+#!/usr/bin/env php
+<?php
+  $path = __DIR__ . "/../";
+
+  if(!file_exists('www/sites/all/modules/springboard')) {
+    symlink($path . 'vendor/jacksonriver/springboard_modules', 'www/sites/all/modules/springboard');
+    echo 'Symlinked springboard modules.' . PHP_EOL;
+  }
+
+  if(!file_exists('www/sites/all/themes/springboard_themes')) {
+    symlink($path . 'vendor/jacksonriver/springboard_themes', 'www/sites/all/themes/springboard_themes');
+    echo 'Symlinked springboard themes.' . PHP_EOL;
+  }
+
+  if(!file_exists('www/profiles/sbsetup')) {
+    symlink($path . 'vendor/jacksonriver/springboard_profile', 'www/profiles/sbsetup');
+    echo 'Symlinked springboard install profile.' . PHP_EOL;
+  }
