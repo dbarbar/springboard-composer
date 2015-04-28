@@ -2121,12 +2121,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/drush-ops/drush.git",
-                "reference": "97b9cf0bfd01227beb6440963eb73d9fef4a9a31"
+                "reference": "c817e78563d9431ffdd4ae397c36be9796a49903"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drush-ops/drush/zipball/97b9cf0bfd01227beb6440963eb73d9fef4a9a31",
-                "reference": "97b9cf0bfd01227beb6440963eb73d9fef4a9a31",
+                "url": "https://api.github.com/repos/drush-ops/drush/zipball/c817e78563d9431ffdd4ae397c36be9796a49903",
+                "reference": "c817e78563d9431ffdd4ae397c36be9796a49903",
                 "shasum": ""
             },
             "require": {
@@ -2197,7 +2197,7 @@
             ],
             "description": "Drush is a command line shell and scripting interface for Drupal, a veritable Swiss Army knife designed to make life easier for those of us who spend some of our working hours hacking away at the command prompt.",
             "homepage": "http://www.drush.org",
-            "time": "2015-04-27 15:11:13"
+            "time": "2015-04-28 01:33:07"
         },
         {
             "name": "jacksonriver/litle-sdk-for-php",
@@ -2879,7 +2879,163 @@
             "time": "2014-10-15 17:50:37"
         }
     ],
-    "packages-dev": null,
+    "packages-dev": [
+        {
+            "name": "drupal/backup_migrate",
+            "version": "7.3.0",
+            "source": {
+                "type": "git",
+                "url": "http://git.drupal.org/project/backup_migrate",
+                "reference": "eb014f95c494f857fba12c1f326ad60afd5a9383"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://ftp.drupal.org/files/projects/backup_migrate-7.x-3.0-alpha1.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "drupal/drupal": "7.*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-7.x-3.x": "7.3.x-dev"
+                }
+            },
+            "notification-url": "http://packagist.drupal-composer.org/downloads/",
+            "description": "Backup the Drupal database and files or migrate them to another environment."
+        },
+        {
+            "name": "drupal/devel",
+            "version": "7.1.5",
+            "source": {
+                "type": "git",
+                "url": "http://git.drupal.org/project/devel",
+                "reference": "becb6ca3ced27872b941b30ca308da03a209425a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://ftp.drupal.org/files/projects/devel-7.x-1.5.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "drupal/drupal": "7.*"
+            },
+            "replace": {
+                "drupal/devel_generate": "self.version",
+                "drupal/devel_node_access": "self.version"
+            },
+            "suggest": {
+                "drupal/menu": "Required by drupal/devel_node_access"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-7.x-1.x": "7.1.x-dev"
+                }
+            },
+            "notification-url": "http://packagist.drupal-composer.org/downloads/",
+            "description": "Various blocks, pages, and functions for developers."
+        },
+        {
+            "name": "drupal/mongodb",
+            "version": "7.1.0-rc2",
+            "source": {
+                "type": "git",
+                "url": "http://git.drupal.org/project/mongodb",
+                "reference": "658b92f8b988fe159fc8bf0f66479d093dd6c09f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://ftp.drupal.org/files/projects/mongodb-7.x-1.0-rc2.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "drupal/drupal": "7.*"
+            },
+            "replace": {
+                "drupal/mongodb_block": "self.version",
+                "drupal/mongodb_block_ui": "self.version",
+                "drupal/mongodb_cache": "self.version",
+                "drupal/mongodb_field_storage": "self.version",
+                "drupal/mongodb_migrate": "self.version",
+                "drupal/mongodb_queue": "self.version",
+                "drupal/mongodb_session": "self.version",
+                "drupal/mongodb_watchdog": "self.version"
+            },
+            "suggest": {
+                "drupal/mongodb_block": "Required by drupal/mongodb_block_ui"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-7.x-1.x": "7.1.x-dev"
+                }
+            },
+            "notification-url": "http://packagist.drupal-composer.org/downloads/",
+            "description": "Integration between Drupal and MongoDB."
+        },
+        {
+            "name": "drupal/stage_file_proxy",
+            "version": "7.1.6",
+            "source": {
+                "type": "git",
+                "url": "http://git.drupal.org/project/stage_file_proxy",
+                "reference": "b2a2fd714a3c6cb8499f29369cd3a6fb7db09f4c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://ftp.drupal.org/files/projects/stage_file_proxy-7.x-1.6.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "drupal/drupal": "7.*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-7.x-1.x": "7.1.x-dev"
+                }
+            },
+            "notification-url": "http://packagist.drupal-composer.org/downloads/",
+            "description": "Proxies files from production server so you don't have to transfer them manually"
+        },
+        {
+            "name": "drupal/xhprof",
+            "version": "7.1.0-beta3",
+            "source": {
+                "type": "git",
+                "url": "http://git.drupal.org/project/XHProf.git",
+                "reference": "c91634308c223164cf96945b77737e2a6124d8b2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://ftp.drupal.org/files/projects/XHProf-7.x-1.0-beta3.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "drupal/drupal": "7.*",
+                "drupal/mongodb": "7.*"
+            },
+            "replace": {
+                "drupal/xhprof": "self.version",
+                "drupal/xhprof_mongodb": "self.version"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-7.x-1.x": "7.1.x-dev"
+                }
+            },
+            "notification-url": "http://packagist.drupal-composer.org/downloads/",
+            "description": "UI for xhprof runs."
+        }
+    ],
     "aliases": [],
     "minimum-stability": "beta",
     "stability-flags": {
