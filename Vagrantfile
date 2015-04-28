@@ -2,8 +2,8 @@ ip = '192.168.100.100'
 name = 'localdev'
 cpus = 2
 memory = 1024
-domain = springboard.local
-docroot = www
+domain = 'springboard.local'
+docroot = 'www'
 
 Vagrant.configure(2) do |config|
   config.vm.box = "dbarbar/local-springboard"
